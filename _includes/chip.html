@@ -1,0 +1,12 @@
+<div class="mdc-chip-set" role="grid">
+    {% for tag in mix.tags %}
+    <div class="mdc-chip" role="row">
+        <div class="mdc-chip__ripple"></div>
+        <span role="gridcell">
+            <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                <span class="mdc-chip__text">{{ tag.name }}</span>
+            </span>
+        </span>
+    </div>
+    {% endfor %}
+</div>

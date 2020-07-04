@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000;
+}
+
+#header {
+    padding: 0px 10px;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background: white;
+    justify-content: space-between;
+}
+
+#header div {
+    display: flex;
+    align-items: center;
+}
+
+#header a {
+    padding-right: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+#tag-collection {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+    overflow: scroll;
+    position: sticky;
+    top: 61px;
+    background: white;
+}
+
+.filter-button {
+    cursor: pointer;
+    color: #AFAFAF;
+    padding: 5px 15px;
+    display: inline-block;
+    transition: color 300ms;
+}
+
+.filter-button.selected, .filter-button:hover, .mix-item:hover, .mix-item.selected {
+    color: #000;
+}
+
+.mix-item {
+    padding: 0px 10px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #AFAFAF;
+    transition: color 300ms;
+}
+
+.info {
+    padding: 10px;
+}
+
+.material-icons {
+    margin-right: 10px;
+}
+
+iframe {
+    position: fixed;
+    height: 60px;
+    max-width: calc(100% - 20px);
+    bottom: 10px;
+    left: 10px;
+}
