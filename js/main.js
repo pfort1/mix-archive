@@ -145,3 +145,7 @@ $(document).on('mouseover', '.mix-item', function () {
   $('.mix-item img').removeClass('hoverimg')
   $(img).addClass('hoverimg')
 })
+
+$(document).on('mouseout', '.mix-item', function () {
+  $('.mix-item img').removeClass('hoverimg')
+})
