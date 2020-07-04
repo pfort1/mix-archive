@@ -65,7 +65,7 @@ $(document).on('click', '.mix-item', function () {
   var $this = $(this)
   var key = $this.attr('data-key')
   console.log(key)
-  var embedUrl = 'http://api.mixcloud.com' + key + 'embed-json/'
+  var embedUrl = 'https://api.mixcloud.com' + key + 'embed-json/'
   console.log(embedUrl)
 
   if ($("#mixcloud").attr('src') != '') {
