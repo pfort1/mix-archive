@@ -14,13 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const key = val.key
         const duration = val.audio_length
         const tags = val.tags
+        const picture = val.pictures.large
 
         html += "<div class='mix-item ";
         tags.forEach(function (tag) {
           const tagname = tag.name
           html += convertToSlug(tagname) + ' ';
         })
-        html += "' data-key='" + key + "'>" + name + "<div class='duration'>" + duration + "</div>" + "</div>";
+        html += "' data-key='" + key + "'>" + name + "<div class='duration'>" + duration + "</div>";
+        html += "<img src='" + picture + "'></img></div>";
 
         tags.forEach(function (tag, i) {
           const tagname = tag.name
@@ -51,7 +53,7 @@ function convertToSlug(Text) {
 function removeDuplicates() {
   var seen = {};
   $('a[data-filter]').each(function () {
-    console.log($(this))
+    //console.log($(this))
     var txt = $(this).text();
     if (seen[txt])
       $(this).remove();
@@ -135,3 +137,11 @@ function swiperInit() {
   });
 
 }
+
+
+$(document).on('mouseover', '.mix-item', function () {
+  console.log(img)
+  var img = $(this).children('img')
+  $('.mix-item img').removeClass('hoverimg')
+  $(img).addClass('hoverimg')
+})
