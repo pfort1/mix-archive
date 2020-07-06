@@ -1,3 +1,7 @@
+* {
+    transition: all 500ms ease;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -5,8 +9,29 @@ body {
     color: #000;
 }
 
+.dark #header, .dark #tags, .dark {
+    background-color: black;
+}
+
+.dark .selected, .dark #header a, .dark #header span {
+    color: white;
+}
+
+.dark #tags>a, .dark #pagination-container {
+    background: black;
+    color: white;
+}
+
+.dark .mix-item, .dark .filter-button {
+    color: #FFFFFF7D;
+}
+
+.dark .mix-item:hover, .dark .filter-button:hover, .dark .mix-item.selected, .dark #pagination-container a {
+    color: #ffffff;
+}
+
 #header {
-    padding: 0px 10px;
+    padding: 0px 20px;
     display: flex;
     border-bottom: 1px solid #ccc;
     align-items: center;
@@ -28,7 +53,7 @@ body {
     text-decoration: none;
 }
 
-#tag-collection {
+#tags {
     display: flex;
     align-items: center;
     height: 60px;
@@ -39,12 +64,46 @@ body {
     background: white;
 }
 
+#tag-collection {
+    display: flex;
+    align-items: center;
+}
+
+#tags>a {
+    position: sticky;
+    left: 0;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+#pagination-container {
+    margin-bottom: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    height: 60px;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    color: #AFAFAF;
+    position: sticky;
+    bottom: 80px;
+    background-color: white;
+}
+
+#pagination-container a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
 .filter-button {
     cursor: pointer;
     color: #AFAFAF;
     padding: 5px 15px;
     display: inline-block;
-    transition: color 300ms;
 }
 
 .filter-button.selected, .filter-button:hover, .mix-item:hover, .mix-item.selected {
@@ -52,22 +111,34 @@ body {
 }
 
 .mix-item {
-    padding: 0px 10px;
+    padding: 0px 20px;
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     color: #AFAFAF;
-    transition: color 300ms;
 }
 
 .info {
-    padding: 10px;
+    padding: 20px;
 }
 
 .material-icons {
-    margin-right: 10px;
+    margin-right: 10px !important;
+}
+
+#page-next span {
+    padding-left: 5px;
+}
+
+#buttons {
+    display: flex;
+    width: auto;
+}
+
+#page-back {
+    padding-right: 30px;
 }
 
 iframe {
@@ -76,6 +147,7 @@ iframe {
     max-width: calc(100% - 20px);
     bottom: 10px;
     left: 10px;
+    background: #ccc;
 }
 
 img {
@@ -90,4 +162,8 @@ img {
 
 .hoverimg {
     opacity: 1;
+}
+
+#header span {
+    margin-left: -5px;
 }
